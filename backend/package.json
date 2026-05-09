@@ -1,0 +1,35 @@
+{
+  "name": "talk-we-talk-backend",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "jest --runInBand"
+  },
+  "dependencies": {
+    "@azure/storage-blob": "^12.31.0",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^4.18.4",
+    "express-validator": "^7.0.1",
+    "ioredis": "^5.4.1",
+    "jose": "^5.0.0",
+    "mongoose": "^7.7.0"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.18",
+    "@types/jest": "^29.5.4",
+    "@types/node": "^20.14.1",
+    "@types/supertest": "^2.0.13",
+    "jest": "^29.7.0",
+    "supertest": "^7.2.2",
+    "ts-jest": "^29.2.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.2"
+  }
+}
