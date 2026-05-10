@@ -56,6 +56,17 @@ if (!useInMemoryDatabase) {
   console.log('MongoDB not configured or using placeholder values - running in-memory development mode');
 }
 
+app.get('/', (req, res) => res.json({ 
+  message: 'Talk We Talk API',
+  version: '1.0.0',
+  endpoints: {
+    health: '/health',
+    auth: '/auth',
+    media: '/media',
+    search: '/search'
+  }
+}));
+
 app.get('/health', (req, res) => res.json({ status: 'ok' }));
 app.use('/auth', authRoutes);
 app.use('/media', verifyAzureJwt, mediaRoutes);
