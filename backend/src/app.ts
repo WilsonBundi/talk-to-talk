@@ -49,8 +49,8 @@ if (!useInMemoryDatabase) {
   mongoose.connect(mongodbUri!).then(() => {
     console.log('MongoDB connected');
   }).catch((err) => {
-    console.error('MongoDB connection failed', err);
-    process.exit(1);
+    console.error('MongoDB connection failed, falling back to in-memory mode:', err.message);
+    // Don't exit - continue with in-memory database
   });
 } else {
   console.log('MongoDB not configured or using placeholder values - running in-memory development mode');
