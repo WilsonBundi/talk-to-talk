@@ -33,7 +33,7 @@ jobs:
         uses: azure/webapps-deploy@v3
         with:
           app-name: ${{ secrets.AZURE_BACKEND_APP_NAME }}
-          package: backend
+          package: backend/dist
 
   frontend:
     runs-on: ubuntu-latest
