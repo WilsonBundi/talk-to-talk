@@ -2,7 +2,7 @@ export interface ApiOptions {
   token?: string;
 }
 
-const baseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000';
+const baseUrl = import.meta.env.VITE_API_BASE_URL || (import.meta.env.DEV ? '/api' : 'https://talkwetalk.azurewebsites.net');
 
 const request = async (path: string, options: RequestInit = {}, token?: string) => {
   const headers: Record<string, string> = {
