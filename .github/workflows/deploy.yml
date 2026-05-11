@@ -54,8 +54,6 @@ jobs:
           cd frontend
           npm run build
       - name: Deploy to Azure Static Web App
-        id: deploy_swa
-        continue-on-error: true
         uses: azure/static-web-apps-deploy@v1
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
@@ -64,6 +62,3 @@ jobs:
           app_location: "frontend"
           output_location: "dist"
           api_location: ""
-      - name: Check deployment status
-        if: steps.deploy_swa.outcome == 'failure'
-        run: echo "Frontend deployment skipped or failed - may need manual configuration of AZURE_STATIC_WEB_APPS_API_TOKEN"
