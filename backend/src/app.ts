@@ -21,7 +21,7 @@ if (!fs.existsSync(uploadsDir)) {
 }
 
 app.use(express.json());
-app.use(cors({ origin: ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:5175', 'http://localhost:5176', process.env.FRONTEND_URL || '*'] }));
+app.use(cors({ origin: ['http://localhost:5173', 'http://localhost:5174', 'http://localhost:5175', 'http://localhost:5176', 'https://lively-sea-05ce7a503.7.azurestaticapps.net', process.env.FRONTEND_URL].filter(Boolean), credentials: true }));
 
 app.put('/mock-upload/:filename', async (req, res) => {
   const filename = path.basename(req.params.filename);
