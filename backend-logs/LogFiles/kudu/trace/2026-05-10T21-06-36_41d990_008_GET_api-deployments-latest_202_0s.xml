@@ -1,0 +1,8 @@
+<step title="Incoming Request" date="2026-05-10T21:06:36.703" instance="41d990" url="/api/deployments/latest" method="GET" type="request" pid="831,1,31" Accept="*/*" Host="talkwetalk.scm.azurewebsites.net" User-Agent="AZURECLI/2.86.0 (MSI)" Accept-Encoding="gzip, deflate" Authorization="Bea..." x-ms-client-request-id="1e6bb98c-4cb3-11f1-8661-60f677c7bcca" X-ARR-LOG-ID="1e6bb98c-4cb3-11f1-8661-60f677c7bcca" CLIENT-IP="217.199.144.57:46143" X-SITE-DEPLOYMENT-ID="talkwetalk" WAS-DEFAULT-HOSTNAME="talkwetalk.scm.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/deployments/latest" X-Client-IP="217.199.144.57" X-Client-Port="46143" >
+  <step title="DeploymentService.GetResult" date="2026-05-10T21:06:36.745" >
+    <step title="DeploymentService.GetLatestDeployment" date="2026-05-10T21:06:36.753" >
+      <step title="DeploymentManager.GetResults" date="2026-05-10T21:06:36.760" /><!-- duration: 177ms -->
+    </step><!-- duration: 201ms -->
+  </step><!-- duration: 213ms -->
+  <step title="Outgoing response" date="2026-05-10T21:06:36.964" type="response" statusCode="202" statusText="Accepted" /><!-- duration: 4ms -->
+</step><!-- duration: 269ms -->

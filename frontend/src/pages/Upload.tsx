@@ -102,30 +102,33 @@ function Upload({ auth }: { auth: { user: any; token: string; role: string } }) 
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
+    if (!file) {
+      setStatus('Please select a file before uploading.');
+      return;
+    }
+
     setStatus('Preparing upload...');
 
     try {
-      // For testing without file, use a mock file
-      const testFile = file || new File(['test content'], 'test.txt', { type: 'text/plain' });
-      
       setStatus('Requesting upload URL...');
       const { uploadUrl, blobUrl } = await createUploadUrl(auth.token, {
-        filename: testFile.name,
-        contentType: testFile.type
+        filename: file.name,
+        contentType: file.type
       });
 
       setStatus('Uploading file...');
       const formData = new FormData();
-      formData.append('file', testFile);
+      formData.append('file', file);
 
       const uploadResponse = await fetch(uploadUrl, {
         method: 'POST',
-        headers: { 'Authorization': `Bearer ${auth.token}` },
+        headers: { Authorization: `Bearer ${auth.token}` },
         body: formData
       });
 
       if (!uploadResponse.ok) {
-        throw new Error('Upload failed');
+        const errorText = await uploadResponse.text().catch(() => uploadResponse.statusText);
+        throw new Error(errorText || 'Upload failed');
       }
 
       const uploadResult = await uploadResponse.json();
@@ -152,7 +155,7 @@ function Upload({ auth }: { auth: { user: any; token: string; role: string } }) 
         tags: processedTags,
         taggedPeople: processedTaggedPeople,
         mediaUrl: mediaUrl,
-        mediaType: testFile.type
+        mediaType: file.type
       });
 
       setStatus('Upload completed successfully! Your media is now live.');
@@ -187,10 +190,10 @@ function Upload({ auth }: { auth: { user: any; token: string; role: string } }) 
               />
               <label htmlFor="file-input" className="file-upload-label animate-fade-in-up">
                 <div className="upload-text animate-fade-in-up animate-stagger-1">
-                  No file chosen
+                  {file ? file.name : 'No file chosen'}
                 </div>
                 <div className="upload-hint animate-fade-in-up animate-stagger-2">
-                  Choose a photo or video file to upload.
+                  {file ? `${(file.size / 1024 / 1024).toFixed(1)} MB selected` : 'Choose a photo or video file to upload.'}
                 </div>
               </label>
               {file && (
@@ -307,7 +310,7 @@ function Upload({ auth }: { auth: { user: any; token: string; role: string } }) 
           </div>
 
           <div className="form-actions animate-fade-in-up">
-            <button type="submit" className="upload-button btn-bounce" disabled={false}>
+            <button type="submit" className="upload-button btn-bounce" disabled={!file}>
               Upload
             </button>
           </div>

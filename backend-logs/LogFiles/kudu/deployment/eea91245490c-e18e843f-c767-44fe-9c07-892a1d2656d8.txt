@@ -1,0 +1,249 @@
+2026-05-10T20:47:19  Fetching changes.
+2026-05-10T20:47:19    Starting  LocalZipHandler
+2026-05-10T20:47:19    Cleaning up temp folders from previous zip deployments and extracting pushed zip file /tmp/zipdeploy/9f6d4ad8-15a7-47cc-b7a0-753738f249c0.zip (15.74 MB) to /tmp/zipdeploy/extracted
+2026-05-10T20:47:38  Updating submodules.
+2026-05-10T20:47:38  Preparing deployment for commit id '4cc603ee-9'.
+2026-05-10T20:47:39  PreDeployment: context.CleanOutputPath False
+2026-05-10T20:47:39  PreDeployment: context.OutputPath /home/site/wwwroot
+2026-05-10T20:47:39  Repository path is /tmp/zipdeploy/extracted
+2026-05-10T20:47:39  Running oryx build...
+2026-05-10T20:47:39    Command: oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 22 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8deaed55fc5ec17 -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log
+2026-05-10T20:47:40    Operation performed by Microsoft Oryx, https://github.com/Microsoft/Oryx
+2026-05-10T20:47:40    You can report issues at https://github.com/Microsoft/Oryx/issues
+2026-05-10T20:47:40    
+2026-05-10T20:47:40    Oryx Version: 0.2.20260420.1+83c04e9ee1882dc90d279b63348824daedbd3c96, Commit: 83c04e9ee1882dc90d279b63348824daedbd3c96, ReleaseTagName: 20260420.1
+2026-05-10T20:47:40    
+2026-05-10T20:47:40    Build Operation ID: dfe1ea422337eb46
+2026-05-10T20:47:40    Repository Commit : 4cc603ee-9ba8-4dd0-9ed6-37f3b1e98d6b
+2026-05-10T20:47:40    OS Type           : bookworm
+2026-05-10T20:47:40    Image Type        : githubactions
+2026-05-10T20:47:40    
+2026-05-10T20:47:40    Primary SDK Storage URL: https://oryx-cdn.microsoft.io
+2026-05-10T20:47:40    Backup SDK Storage URL: 
+2026-05-10T20:47:40    ACR SDK Registry URL: (not set)
+2026-05-10T20:47:40    SDK provider status:
+2026-05-10T20:47:40      External ACR SDK provider: Enabled
+2026-05-10T20:47:40      External SDK provider: Enabled
+2026-05-10T20:47:40      Direct ACR SDK provider: Disabled
+2026-05-10T20:47:40      Blob SDK provider: Enabled
+2026-05-10T20:47:40    External ACR SDK provider is enabled. Only using user-specified platform: nodejs
+2026-05-10T20:47:40    Detecting platforms...
+2026-05-10T20:47:42    External ACR provider resolved version '22.22.0' for nodejs.
+2026-05-10T20:47:42    Version resolved using external ACR SDK provider.
+2026-05-10T20:47:42    Detected following platforms:
+2026-05-10T20:47:42      nodejs: 22.22.0
+2026-05-10T20:47:42    Requesting SDK from ACR via external provider: nodejs 22.22.0 (bookworm)
+2026-05-10T20:47:42    Successfully pulled SDK from ACR via external provider: nodejs 22.22.0
+2026-05-10T20:47:42    SDK for 'nodejs' version '22.22.0' fetched via external ACR provider.
+2026-05-10T20:47:42    Version '22.22.0' of platform 'nodejs' is not installed. Generating script to install it...
+2026-05-10T20:47:42    Detected the following frameworks: Express
+2026-05-10T20:47:42    
+2026-05-10T20:47:42    Using intermediate directory '/tmp/8deaed55fc5ec17'.
+2026-05-10T20:47:42    
+2026-05-10T20:47:42    Copying files to the intermediate directory...
+2026-05-10T20:47:51    Copying files to intermediate directory done in 9 sec(s).
+2026-05-10T20:47:51    
+2026-05-10T20:47:51    Source directory     : /tmp/8deaed55fc5ec17
+2026-05-10T20:47:51    Destination directory: /home/site/wwwroot
+2026-05-10T20:47:51    
+2026-05-10T20:47:51    Installing platform...
+2026-05-10T20:47:51    
+2026-05-10T20:47:51    Downloading and extracting 'nodejs' version '22.22.0' to '/tmp/oryx/platforms/nodejs/22.22.0'...
+2026-05-10T20:47:51    Detected image debian flavor: bookworm.
+2026-05-10T20:47:51    SDK binary download was skipped. Looking for cached tarball...
+2026-05-10T20:47:51    Found tarball at /var/OryxAcrSdks/nodejs/nodejs-bookworm-22.22.0.tar.gz
+2026-05-10T20:47:55    Successfully extracted nodejs version 22.22.0 from cached tarball.
+2026-05-10T20:47:55    
+2026-05-10T20:47:55    Platform installation done in 4 sec(s).
+2026-05-10T20:47:55    Running build script snippets...
+2026-05-10T20:47:55    Removing existing manifest file
+2026-05-10T20:47:55    Creating directory for command manifest file if it does not exist
+2026-05-10T20:47:55    Creating a manifest file...
+2026-05-10T20:47:55    Node Build Command Manifest file created.
+2026-05-10T20:47:55    
+2026-05-10T20:47:55    Using Node version:
+2026-05-10T20:47:56    v22.22.0
+2026-05-10T20:47:56    
+2026-05-10T20:47:56    Using Npm version:
+2026-05-10T20:47:57    10.9.4
+2026-05-10T20:47:57    
+2026-05-10T20:47:57    Running 'npm install'...
+2026-05-10T20:47:57    
+2026-05-10T20:48:06    
+2026-05-10T20:48:06    npm notice
+2026-05-10T20:48:06    npm notice New major version of npm available! 10.9.4 -> 11.14.1
+2026-05-10T20:48:06    added 164 packages, and audited 165 packages in 9s
+2026-05-10T20:48:06    npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.14.1
+2026-05-10T20:48:06    
+2026-05-10T20:48:06    npm notice To update run: npm install -g npm@11.14.1
+2026-05-10T20:48:06    27 packages are looking for funding
+2026-05-10T20:48:06    npm notice
+2026-05-10T20:48:06      run `npm fund` for details
+2026-05-10T20:48:06    
+2026-05-10T20:48:06    found 0 vulnerabilities
+2026-05-10T20:48:07    
+2026-05-10T20:48:07    Running 'npm run build'...
+2026-05-10T20:48:07    
+2026-05-10T20:48:07    
+2026-05-10T20:48:07    > talk-we-talk-backend@0.1.0 build
+2026-05-10T20:48:07    > tsc
+2026-05-10T20:48:07    
+2026-05-10T20:48:07    Version 5.9.3
+2026-05-10T20:48:07    tsc: The TypeScript Compiler - Version 5.9.3
+2026-05-10T20:48:07    
+2026-05-10T20:48:07    COMMON COMMANDS
+2026-05-10T20:48:07    
+2026-05-10T20:48:07      tsc
+2026-05-10T20:48:07      Compiles the current project (tsconfig.json in the working directory.)
+2026-05-10T20:48:07    
+2026-05-10T20:48:07      tsc app.ts util.ts
+2026-05-10T20:48:07      Ignoring tsconfig.json, compiles the specified files with default compiler options.
+2026-05-10T20:48:07    
+2026-05-10T20:48:07      tsc -b
+2026-05-10T20:48:07      Build a composite project in the working directory.
+2026-05-10T20:48:07    
+2026-05-10T20:48:07      tsc --init
+2026-05-10T20:48:07      Creates a tsconfig.json with the recommended settings in the working directory.
+2026-05-10T20:48:07    
+2026-05-10T20:48:07      tsc -p ./path/to/tsconfig.json
+2026-05-10T20:48:07      Compiles the TypeScript project located at the specified path.
+2026-05-10T20:48:07    
+2026-05-10T20:48:07      tsc --help --all
+2026-05-10T20:48:08      An expanded version of this information, showing all possible compiler options
+2026-05-10T20:48:08    
+2026-05-10T20:48:08      tsc --noEmit
+2026-05-10T20:48:08      tsc --target esnext
+2026-05-10T20:48:08      Compiles the current project, with additional settings.
+2026-05-10T20:48:08    
+2026-05-10T20:48:08    COMMAND LINE FLAGS
+2026-05-10T20:48:08    
+2026-05-10T20:48:08    --help, -h
+2026-05-10T20:48:08    Print this message.
+2026-05-10T20:48:08    
+2026-05-10T20:48:08    --watch, -w
+2026-05-10T20:48:08    Watch input files.
+2026-05-10T20:48:08    
+2026-05-10T20:48:08    --all
+2026-05-10T20:48:08    Show all compiler options.
+2026-05-10T20:48:08    
+2026-05-10T20:48:08    --version, -v
+2026-05-10T20:48:08    Print the compiler's version.
+2026-05-10T20:48:08    
+2026-05-10T20:48:08    --init
+2026-05-10T20:48:08    Initializes a TypeScript project and creates a tsconfig.json file.
+2026-05-10T20:48:08    
+2026-05-10T20:48:08    --project, -p
+2026-05-10T20:48:08    Compile the project given the path to its configuration file, or to a folder with a 'tsconfig.json'.
+2026-05-10T20:48:08    
+2026-05-10T20:48:08    --showConfig
+2026-05-10T20:48:08    Print the final configuration instead of building.
+2026-05-10T20:48:08    
+2026-05-10T20:48:08    --build, -b
+2026-05-10T20:48:08    Build one or more projects and their dependencies, if out of date
+2026-05-10T20:48:08    
+2026-05-10T20:48:08    COMMON COMPILER OPTIONS
+2026-05-10T20:48:08    
+2026-05-10T20:48:08    --pretty
+2026-05-10T20:48:08    Enable color and formatting in TypeScript's output to make compiler errors easier to read.
+2026-05-10T20:48:08    type: boolean
+2026-05-10T20:48:08    default: true
+2026-05-10T20:48:08    
+2026-05-10T20:48:08    --declaration, -d
+2026-05-10T20:48:08    Generate .d.ts files from TypeScript and JavaScript files in your project.
+2026-05-10T20:48:08    type: boolean
+2026-05-10T20:48:08    default: `false`, unless `composite` is set
+2026-05-10T20:48:08    
+2026-05-10T20:48:08    --declarationMap
+2026-05-10T20:48:09    Create sourcemaps for d.ts files.
+2026-05-10T20:48:09    type: boolean
+2026-05-10T20:48:09    default: false
+2026-05-10T20:48:09    
+2026-05-10T20:48:09    --emitDeclarationOnly
+2026-05-10T20:48:09    Only output d.ts files and not JavaScript files.
+2026-05-10T20:48:09    type: boolean
+2026-05-10T20:48:09    default: false
+2026-05-10T20:48:09    
+2026-05-10T20:48:09    --sourceMap
+2026-05-10T20:48:09    Create source map files for emitted JavaScript files.
+2026-05-10T20:48:09    type: boolean
+2026-05-10T20:48:09    default: false
+2026-05-10T20:48:09    
+2026-05-10T20:48:09    --noEmit
+2026-05-10T20:48:09    Disable emitting files from a compilation.
+2026-05-10T20:48:09    type: boolean
+2026-05-10T20:48:09    default: false
+2026-05-10T20:48:09    
+2026-05-10T20:48:09    --target, -t
+2026-05-10T20:48:09    Set the JavaScript language version for emitted JavaScript and include compatible library declarations.
+2026-05-10T20:48:09    one of: es5, es6/es2015, es2016, es2017, es2018, es2019, es2020, es2021, es2022, es2023, es2024, esnext
+2026-05-10T20:48:09    default: es5
+2026-05-10T20:48:09    
+2026-05-10T20:48:09    --module, -m
+2026-05-10T20:48:09    Specify what module code is generated.
+2026-05-10T20:48:09    one of: none, commonjs, amd, umd, system, es6/es2015, es2020, es2022, esnext, node16, node18, node20, nodenext, preserve
+2026-05-10T20:48:09    default: undefined
+2026-05-10T20:48:09    
+2026-05-10T20:48:09    --lib
+2026-05-10T20:48:09    Specify a set of bundled library declaration files that describe the target runtime environment.
+2026-05-10T20:48:09    one or more: es5, es6/es2015, es7/es2016, es2017, es2018, es2019, es2020, es2021, es2022, es2023, es2024, esnext, dom, dom.iterable, dom.asynciterable, webworker, webworker.importscripts, webworker.iterable, webworker.asynciterable, scripthost, es2015.core, es2015.collection, es2015.generator, es2015.iterable, es2015.promise, es2015.proxy, es2015.reflect, es2015.symbol, es2015.symbol.wellknown, es2016.array.include, es2016.intl, es2017.arraybuffer, es2017.date, es2017.object, es2017.sharedmemory, es2017.string, es2017.intl, es2017.typedarrays, es2018.asyncgenerator, es2018.asynciterable/esnext.asynciterable, es2018.intl, es2018.promise, es2018.regexp, es2019.array, es2019.object, es2019.string, es2019.symbol/esnext.symbol, es2019.intl, es2020.bigint/esnext.bigint, es2020.date, es2020.promise, es2020.sharedmemory, es2020.string, es2020.symbol.wellknown, es2020.intl, es2020.number, es2021.promise, es2021.string, es2021.weakref/esnext.weakref, es2021.intl, es2022.array, es2022.error, es2022.intl, es2022.object, es2022.string, es2022.regexp, es2023.array, es2023.collection, es2023.intl, es2024.arraybuffer, es2024.collection, es2024.object/esnext.object, es2024.promise, es2024.regexp/esnext.regexp, es2024.sharedmemory, es2024.string/esnext.string, esnext.array, esnext.collection, esnext.intl, esnext.disposable, esnext.promise, esnext.decorators, esnext.iterator, esnext.float16, esnext.error, esnext.sharedmemory, decorators, decorators.legacy
+2026-05-10T20:48:09    default: undefined
+2026-05-10T20:48:09    
+2026-05-10T20:48:09    --allowJs
+2026-05-10T20:48:09    Allow JavaScript files to be a part of your program. Use the 'checkJs' option to get errors from these files.
+2026-05-10T20:48:09    type: boolean
+2026-05-10T20:48:09    default: false
+2026-05-10T20:48:09    
+2026-05-10T20:48:09    --checkJs
+2026-05-10T20:48:09    Enable error reporting in type-checked JavaScript files.
+2026-05-10T20:48:09    type: boolean
+2026-05-10T20:48:09    default: false
+2026-05-10T20:48:09    
+2026-05-10T20:48:09    --jsx
+2026-05-10T20:48:09    Specify what JSX code is generated.
+2026-05-10T20:48:09    one of: preserve, react, react-native, react-jsx, react-jsxdev
+2026-05-10T20:48:09    default: undefined
+2026-05-10T20:48:09    
+2026-05-10T20:48:09    --outFile
+2026-05-10T20:48:09    Specify a file that bundles all outputs into one JavaScript file. If 'declaration' is true, also designates a file that bundles all .d.ts output.
+2026-05-10T20:48:09    
+2026-05-10T20:48:09    --outDir
+2026-05-10T20:48:10    Specify an output folder for all emitted files.
+2026-05-10T20:48:10    
+2026-05-10T20:48:10    --removeComments
+2026-05-10T20:48:10    Disable emitting comments.
+2026-05-10T20:48:10    type: boolean
+2026-05-10T20:48:10    default: false
+2026-05-10T20:48:10    
+2026-05-10T20:48:10    --strict
+2026-05-10T20:48:10    Enable all strict type-checking options.
+2026-05-10T20:48:10    type: boolean
+2026-05-10T20:48:10    default: false
+2026-05-10T20:48:10    
+2026-05-10T20:48:10    --types
+2026-05-10T20:48:10    Specify type package names to be included without being referenced in a source file.
+2026-05-10T20:48:10    
+2026-05-10T20:48:10    --esModuleInterop
+2026-05-10T20:48:10    Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility.
+2026-05-10T20:48:10    type: boolean
+2026-05-10T20:48:10    default: false
+2026-05-10T20:48:10    
+2026-05-10T20:48:10    You can learn about all of the compiler options at https://aka.ms/tsc
+2026-05-10T20:48:10    
+2026-05-10T20:48:10    npm notice
+npm notice New major version of npm available! 10.9.4 -> 11.14.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.14.1
+npm notice To update run: npm install -g npm@11.14.1
+npm notice
+/bin/bash -c "oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 22 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8deaed55fc5ec17 -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log ; exit $PIPESTATUS "
+2026-05-10T20:48:10  
+2026-05-10T20:48:10  
+2026-05-10T20:48:10  Generating summary of Oryx build
+2026-05-10T20:48:11  Parsing the build logs
+2026-05-10T20:48:11  Found 0 issue(s)
+2026-05-10T20:48:11  
+2026-05-10T20:48:11  Build Summary :
+2026-05-10T20:48:11  ===============
+2026-05-10T20:48:12  Errors (0)
+2026-05-10T20:48:12  Warnings (0)
+2026-05-10T20:48:12  
+2026-05-10T20:48:12  Deployment Failed. deployer = OneDeploy deploymentPath = OneDeploy

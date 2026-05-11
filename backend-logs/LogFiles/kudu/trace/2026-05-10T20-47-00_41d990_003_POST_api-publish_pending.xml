@@ -1,0 +1,141 @@
+<step title="Incoming Request" date="2026-05-10T20:47:00.494" instance="41d990" url="/api/publish?type=zip" method="POST" type="request" pid="831,1,5" Accept="*/*" Host="talkwetalk.scm.azurewebsites.net" User-Agent="AZURECLI/2.86.0 (MSI)" Accept-Encoding="gzip, deflate" Authorization="Bea..." Cache-Control="no-cache" Content-Type="application/octet-stream" Cookie="ARRAffinity=41d990ad34bd5e0f42c1fdc3f4923c61f776461bb4c2c644bde9e681f6c23001; ARRAffinitySameSite=41d990ad34bd5e0f42c1fdc3f4923c61f776461bb4c2c644bde9e681f6c23001" Content-Length="16500489" x-ms-client-request-id="537ea2e1-4cb1-11f1-8610-60f677c7bcca" x-ms-artifact-checksum="4cdbcaf93841f04c17f5117e2fb58f4301ffa83da1b23216e3b70012896fd86f" X-ARR-LOG-ID="537ea2e1-4cb1-11f1-8610-60f677c7bcca" CLIENT-IP="217.199.144.57:25731" X-SITE-DEPLOYMENT-ID="talkwetalk" WAS-DEFAULT-HOSTNAME="talkwetalk.scm.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/publish?type=zip" X-Client-IP="217.199.144.57" X-Client-Port="25731" >
+  <step title="OneDeploy" date="2026-05-10T20:47:00.542" >
+    <step title="None repository commit" date="2026-05-10T20:47:00.557" >
+      <step title="Commit id: 4cc603ee-9ba8-4dd0-9ed6-37f3b1e98d6b" date="2026-05-10T20:47:00.562" Message="N/A" AuthorName="N/A" AuthorEmail="N/A" /><!-- duration: 4ms -->
+    </step><!-- duration: 12ms -->
+    <step title="Starting PushDeployAsync" date="2026-05-10T20:47:00.574" /><!-- duration: 4ms -->
+    <step title="Writing artifact to /tmp/zipdeploy/9f6d4ad8-15a7-47cc-b7a0-753738f249c0.zip" date="2026-05-10T20:47:00.591" >
+      <step title="Writing multipart request body to /tmp/zipdeploy/9f6d4ad8-15a7-47cc-b7a0-753738f249c0.zip" date="2026-05-10T20:47:00.595" /><!-- duration: 9ms -->
+    </step><!-- duration: 15928ms -->
+    <step title="Attempting to fetch target branch HEAD" date="2026-05-10T20:47:16.705" /><!-- duration: 12ms -->
+    <step title="Acquiring Deployment Lock" date="2026-05-10T20:47:16.758" /><!-- duration: 125ms -->
+    <step title="Acquired Deployment Lock" date="2026-05-10T20:47:17.124" /><!-- duration: 24ms -->
+    <step title="Performing fetch based deployment" date="2026-05-10T20:47:17.260" >
+      <step title="Creating temporary deployment" date="2026-05-10T20:47:17.291" /><!-- duration: 369ms -->
+      <step title="Releasing Deployment Lock" date="2026-05-10T20:47:19.606" /><!-- duration: 34ms -->
+      <step title="Cleaning up temp folders from previous zip deployments and extracting pushed zip file /tmp/zipdeploy/9f6d4ad8-15a7-47cc-b7a0-753738f249c0.zip (15.74 MB) to /tmp/zipdeploy/extracted" date="2026-05-10T20:47:19.869" >
+        <step title="ChmodRecursive Process exited with total time taken in ms: 435" date="2026-05-10T20:47:35.536" /><!-- duration: 10ms -->
+      </step><!-- duration: 15682ms -->
+      <step title="None repository commit" date="2026-05-10T20:47:35.556" >
+        <step title="Commit id: 4cc603ee-9ba8-4dd0-9ed6-37f3b1e98d6b" date="2026-05-10T20:47:35.560" Message="OneDeploy" AuthorName="N/A" AuthorEmail="N/A" /><!-- duration: 4ms -->
+      </step><!-- duration: 11ms -->
+      <step title="Deployment timer started" date="2026-05-10T20:47:37.578" >
+        <step title="DeploymentManager.Deploy(id:4cc603ee-9ba8-4dd0-9ed6-37f3b1e98d6b)" date="2026-05-10T20:47:37.586" >
+          <step title="Collecting changeset information" date="2026-05-10T20:47:37.607" /><!-- duration: 94ms -->
+          <step title="Updating submodules" date="2026-05-10T20:47:37.709" /><!-- duration: 1154ms -->
+          <step title="Determining deployment builder" date="2026-05-10T20:47:39.099" >
+            <step title="Builder is OryxBuilder" date="2026-05-10T20:47:39.114" /><!-- duration: 4ms -->
+          </step><!-- duration: 23ms -->
+          <step title="PreDeployment: context.CleanOutputPath False" date="2026-05-10T20:47:39.181" >
+            <step title="PreDeployment: context.OutputPath /home/site/wwwroot" date="2026-05-10T20:47:39.329" >
+              <step title="Building" date="2026-05-10T20:47:39.512" >
+                <step title="Executing external process" date="2026-05-10T20:47:39.854" type="process" path="bash" arguments="-c &quot;oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 22 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8deaed55fc5ec17 -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log ; exit $PIPESTATUS &quot;" >
+                  <step title="Process dump" date="2026-05-10T20:48:10.480" exitCode="1" type="processOutput" /><!-- duration: 6ms -->
+                </step><!-- duration: 30649ms -->
+                <step title="Error occurred" date="2026-05-10T20:48:10.589" type="error" text="npm notice
+npm notice New major version of npm available! 10.9.4 -&gt; 11.14.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.14.1
+npm notice To update run: npm install -g npm@11.14.1
+npm notice
+/bin/bash -c &quot;oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 22 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8deaed55fc5ec17 -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log ; exit $PIPESTATUS &quot;" stackTrace="   at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, CancellationToken token, Encoding encoding, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 239
+   at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, CancellationToken token, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 118
+   at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, Boolean ignoreManifest, CancellationToken token, String message, ILogger internalLogger) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/ExternalCommandBuilder.cs:line 135" /><!-- duration: 4ms -->
+                <step title="Error occurred" date="2026-05-10T20:48:10.634" type="error" text="npm notice
+npm notice New major version of npm available! 10.9.4 -&gt; 11.14.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.14.1
+npm notice To update run: npm install -g npm@11.14.1
+npm notice
+/bin/bash -c &quot;oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 22 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8deaed55fc5ec17 -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log ; exit $PIPESTATUS &quot;" stackTrace="   at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, CancellationToken token, Encoding encoding, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 239
+   at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, CancellationToken token, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 118
+   at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, Boolean ignoreManifest, CancellationToken token, String message, ILogger internalLogger) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/ExternalCommandBuilder.cs:line 135
+   at Kudu.Core.Deployment.Generator.OryxBuilder.RunBuildCommand(IOryxArguments args, DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/OryxBuilder.cs:line 295
+   at Kudu.Core.Deployment.Generator.OryxBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/OryxBuilder.cs:line 136
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 771" /><!-- duration: 5ms -->
+                <step title="Using GenericDeploymentLogParser" date="2026-05-10T20:48:10.976" /><!-- duration: 5ms -->
+              </step><!-- duration: 33215ms -->
+            </step><!-- duration: 33402ms -->
+            <step title="Error occurred" date="2026-05-10T20:48:12.736" type="error" text="npm notice
+npm notice New major version of npm available! 10.9.4 -&gt; 11.14.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.14.1
+npm notice To update run: npm install -g npm@11.14.1
+npm notice
+/bin/bash -c &quot;oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 22 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8deaed55fc5ec17 -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log ; exit $PIPESTATUS &quot;" stackTrace="   at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, CancellationToken token, Encoding encoding, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 239
+   at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, CancellationToken token, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 118
+   at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, Boolean ignoreManifest, CancellationToken token, String message, ILogger internalLogger) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/ExternalCommandBuilder.cs:line 135
+   at Kudu.Core.Deployment.Generator.OryxBuilder.RunBuildCommand(IOryxArguments args, DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/OryxBuilder.cs:line 295
+   at Kudu.Core.Deployment.Generator.OryxBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/OryxBuilder.cs:line 136
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 771
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 840" /><!-- duration: 21ms -->
+            <step title="Cleaning up temp files" date="2026-05-10T20:48:12.823" /><!-- duration: 1458ms -->
+            <step title="Cleaning up temp files" date="2026-05-10T20:48:14.287" /><!-- duration: 511ms -->
+            <step title="Error occurred" date="2026-05-10T20:48:14.848" type="error" text="npm notice
+npm notice New major version of npm available! 10.9.4 -&gt; 11.14.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.14.1
+npm notice To update run: npm install -g npm@11.14.1
+npm notice
+/bin/bash -c &quot;oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 22 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8deaed55fc5ec17 -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log ; exit $PIPESTATUS &quot;" stackTrace="   at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, CancellationToken token, Encoding encoding, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 239
+   at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, CancellationToken token, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 118
+   at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, Boolean ignoreManifest, CancellationToken token, String message, ILogger internalLogger) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/ExternalCommandBuilder.cs:line 135
+   at Kudu.Core.Deployment.Generator.OryxBuilder.RunBuildCommand(IOryxArguments args, DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/OryxBuilder.cs:line 295
+   at Kudu.Core.Deployment.Generator.OryxBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/OryxBuilder.cs:line 136
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 771
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 840
+   at Kudu.Core.Deployment.DeploymentManager.DeployAsync(IRepository repository, ChangeSet changeSet, String deployer, Boolean clean, DeploymentInfoBase deploymentInfo, Boolean needFileUpdate, Boolean fullBuildByDefault) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 266" /><!-- duration: 8ms -->
+          </step><!-- duration: 35685ms -->
+          <step title="Reloading status file with latest updates" date="2026-05-10T20:48:14.916" >
+            <step title="WebHooksManager.PublishEventAsync: PostDeployment" date="2026-05-10T20:48:14.922" /><!-- duration: 67ms -->
+          </step><!-- duration: 77ms -->
+          <step title="Error occurred" date="2026-05-10T20:48:14.999" type="error" text="npm notice
+npm notice New major version of npm available! 10.9.4 -&gt; 11.14.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.14.1
+npm notice To update run: npm install -g npm@11.14.1
+npm notice
+/bin/bash -c &quot;oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 22 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8deaed55fc5ec17 -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log ; exit $PIPESTATUS &quot;" stackTrace="   at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, CancellationToken token, Encoding encoding, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 239
+   at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, CancellationToken token, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 118
+   at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, Boolean ignoreManifest, CancellationToken token, String message, ILogger internalLogger) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/ExternalCommandBuilder.cs:line 135
+   at Kudu.Core.Deployment.Generator.OryxBuilder.RunBuildCommand(IOryxArguments args, DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/OryxBuilder.cs:line 295
+   at Kudu.Core.Deployment.Generator.OryxBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/OryxBuilder.cs:line 136
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 771
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 840
+   at Kudu.Core.Deployment.DeploymentManager.DeployAsync(IRepository repository, ChangeSet changeSet, String deployer, Boolean clean, DeploymentInfoBase deploymentInfo, Boolean needFileUpdate, Boolean fullBuildByDefault) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 266" /><!-- duration: 6ms -->
+          <step title="Marking deployment as failed and cleaning up the temp deployment" date="2026-05-10T20:48:15.103" /><!-- duration: 20ms -->
+        </step><!-- duration: 37743ms -->
+      </step><!-- duration: 37767ms -->
+      <step title="Error occurred" date="2026-05-10T20:48:15.400" type="error" text="Deployment failed" stackTrace="   at Kudu.Core.Deployment.DeploymentManager.DeployAsync(IRepository repository, ChangeSet changeSet, String deployer, Boolean clean, DeploymentInfoBase deploymentInfo, Boolean needFileUpdate, Boolean fullBuildByDefault) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 307
+   at Kudu.Core.Deployment.FetchDeploymentManager.PerformDeployment(DeploymentInfoBase deploymentInfo, IDisposable tempDeployment, ChangeSet tempChangeSet, DeployStatusApiResult updateStatusObj) in /tmp/KuduLite/Kudu.Core/Deployment/FetchDeploymentManager.cs:line 230
+   at Kudu.Core.Deployment.FetchDeploymentManager.&lt;&gt;c__DisplayClass17_0.&lt;&lt;FetchDeploy&gt;b__0&gt;d.MoveNext() in /tmp/KuduLite/Kudu.Core/Deployment/FetchDeploymentManager.cs:line 131
+--- End of stack trace from previous location ---
+   at Kudu.Core.Deployment.FetchDeploymentManager.FetchDeploy(DeploymentInfoBase deployInfo, Boolean asyncRequested, Uri requestUri, String targetBranch) in /tmp/KuduLite/Kudu.Core/Deployment/FetchDeploymentManager.cs:line 124
+   at Kudu.Services.Deployment.PushDeploymentController.PushDeployAsync(ArtifactDeploymentInfo deploymentInfo, Boolean isAsync, HttpContext context, JObject requestJson) in /tmp/KuduLite/Kudu.Services/Deployment/PushDeploymentController.cs:line 804
+   at Kudu.Services.Deployment.PushDeploymentController.OneDeploy(String type, Boolean async, String path, Nullable`1 restart, Nullable`1 clean, Boolean ignoreStack, Boolean trackDeploymentProgress, Boolean trackStatus, Boolean reset) in /tmp/KuduLite/Kudu.Services/Deployment/PushDeploymentController.cs:line 624
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.&lt;InvokeActionMethodAsync&gt;g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.&lt;InvokeNextActionFilterAsync&gt;g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.&lt;InvokeInnerFilterAsync&gt;g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeNextResourceFilter&gt;g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State&amp; next, Scope&amp; scope, Object&amp; state, Boolean&amp; isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeFilterPipelineAsync&gt;g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeAsync&gt;g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.&lt;InvokeAsync&gt;g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Kudu.Services.Web.Startup.&lt;&gt;c.&lt;&lt;Configure&gt;b__11_7&gt;d.MoveNext() in /tmp/KuduLite/Kudu.Services.Web/Startup.cs:line 428
+--- End of stack trace from previous location ---
+   at Kudu.Services.Web.Tracing.TraceMiddleware.Invoke(HttpContext context) in /tmp/KuduLite/Kudu.Services.Web/Tracing/TraceMiddleware.cs:line 101" innerText="npm notice
+npm notice New major version of npm available! 10.9.4 -&gt; 11.14.1
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.14.1
+npm notice To update run: npm install -g npm@11.14.1
+npm notice
+/bin/bash -c &quot;oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform nodejs --platform-version 22 -p virtualenv_name= --log-file /tmp/build-debug.log  -i /tmp/8deaed55fc5ec17 -p compress_node_modules=tar-gz | tee /tmp/oryx-build.log ; exit $PIPESTATUS &quot;" innerStackTrace="   at Kudu.Core.Infrastructure.Executable.ExecuteInternal(ITracer tracer, Func`2 onWriteOutput, Func`2 onWriteError, CancellationToken token, Encoding encoding, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 239
+   at Kudu.Core.Infrastructure.Executable.ExecuteWithProgressWriter(ILogger logger, ITracer tracer, CancellationToken token, String arguments, Object[] args) in /tmp/KuduLite/Kudu.Core/Infrastructure/Executable.cs:line 118
+   at Kudu.Core.Deployment.Generator.ExternalCommandBuilder.RunCommand(DeploymentContext context, String command, Boolean ignoreManifest, CancellationToken token, String message, ILogger internalLogger) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/ExternalCommandBuilder.cs:line 135
+   at Kudu.Core.Deployment.Generator.OryxBuilder.RunBuildCommand(IOryxArguments args, DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/OryxBuilder.cs:line 295
+   at Kudu.Core.Deployment.Generator.OryxBuilder.Build(DeploymentContext context, CancellationToken token) in /tmp/KuduLite/Kudu.Core/Deployment/Generator/OryxBuilder.cs:line 136
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 771
+   at Kudu.Core.Deployment.DeploymentManager.Build(ChangeSet changeSet, ITracer tracer, IDisposable deployStep, IRepository repository, DeploymentInfoBase deploymentInfo, DeploymentAnalytics deploymentAnalytics, Boolean fullBuildByDefault, CancellationToken cancellationToken) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 840
+   at Kudu.Core.Deployment.DeploymentManager.DeployAsync(IRepository repository, ChangeSet changeSet, String deployer, Boolean clean, DeploymentInfoBase deploymentInfo, Boolean needFileUpdate, Boolean fullBuildByDefault) in /tmp/KuduLite/Kudu.Core/Deployment/DeploymentManager.cs:line 266" /><!-- duration: 7ms -->
+      <step title="Incoming Request" date="2026-05-10T20:48:15.488" url="/Error?type=zip" method="POST" type="request" pid="831,1,5" Accept="*/*" Host="talkwetalk.scm.azurewebsites.net" User-Agent="AZURECLI/2.86.0 (MSI)" Accept-Encoding="gzip, deflate" Authorization="Bea..." Cache-Control="no-cache" Content-Type="application/octet-stream" Cookie="ARRAffinity=41d990ad34bd5e0f42c1fdc3f4923c61f776461bb4c2c644bde9e681f6c23001; ARRAffinitySameSite=41d990ad34bd5e0f42c1fdc3f4923c61f776461bb4c2c644bde9e681f6c23001" Content-Length="16500489" x-ms-client-request-id="537ea2e1-4cb1-11f1-8610-60f677c7bcca" x-ms-artifact-checksum="4cdbcaf93841f04c17f5117e2fb58f4301ffa83da1b23216e3b70012896fd86f" X-ARR-LOG-ID="537ea2e1-4cb1-11f1-8610-60f677c7bcca" CLIENT-IP="217.199.144.57:25731" X-SITE-DEPLOYMENT-ID="talkwetalk" WAS-DEFAULT-HOSTNAME="talkwetalk.scm.azurewebsites.net" X-Forwarded-Proto="https" X-AppService-Proto="https" X-Forwarded-TlsVersion="1.3" X-WAWS-Unencoded-URL="/api/publish?type=zip" X-Client-IP="217.199.144.57" X-Client-Port="25731" >
+        <step title="Outgoing response" date="2026-05-10T20:48:15.567" type="response" statusCode="400" statusText="BadRequest" /><!-- duration: 5ms -->
+      </step><!-- duration: 95ms -->
