@@ -159,6 +159,22 @@ router.get(
       if (!fs.existsSync(filePath)) {
         return res.status(404).json({ error: 'File not found' });
       }
+
+      const ext = path.extname(filePath).toLowerCase();
+      const contentTypeMap: Record<string, string> = {
+        '.mp4': 'video/mp4',
+        '.avi': 'video/x-msvideo',
+        '.mov': 'video/quicktime',
+        '.wmv': 'video/x-ms-wmv',
+        '.jpg': 'image/jpeg',
+        '.jpeg': 'image/jpeg',
+        '.png': 'image/png',
+        '.gif': 'image/gif'
+      };
+      
+      const contentType = contentTypeMap[ext] || 'application/octet-stream';
+      res.set('Content-Type', contentType);
+      res.set('Cache-Control', 'public, max-age=3600');
       res.sendFile(filePath);
     } catch (error) {
       next(error);
