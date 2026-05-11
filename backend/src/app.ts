@@ -5,7 +5,7 @@ import dns from 'dns';
 import fs from 'fs';
 import path from 'path';
 import authRoutes from './routes/auth';
-import mediaRoutes from './routes/media';
+import mediaRoutes, { mediaFilesRouter } from './routes/media';
 import searchRoutes from './routes/search';
 import { verifyAzureJwt } from './middleware/auth';
 
@@ -73,6 +73,7 @@ app.get('/', (req, res) => res.json({
 
 app.get('/health', (req, res) => res.json({ status: 'ok' }));
 app.use('/auth', authRoutes);
+app.use('/media/files', mediaFilesRouter);
 app.use('/media', verifyAzureJwt, mediaRoutes);
 app.use('/search', verifyAzureJwt, searchRoutes);
 
