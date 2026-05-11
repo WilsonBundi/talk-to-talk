@@ -71,7 +71,16 @@ function Home({ auth }: { auth: { user: any; token: string; role: string } }) {
         {media.map((item, index) => (
           <Link to={`/media/${item._id}`} key={item._id} className={`card card-hover animate-fade-in-up animate-stagger-${Math.min(index % 5 + 1, 5)}`}>
             {item.mediaType.startsWith('video') ? (
-              <video src={item.mediaUrl} controls muted playsInline preload="metadata" style={{ width: '100%', height: '230px', objectFit: 'cover' }} />
+              <video
+                src={item.mediaUrl}
+                controls
+                muted
+                playsInline
+                preload="metadata"
+                style={{ width: '100%', height: '230px', objectFit: 'cover' }}
+                onClick={(event) => event.stopPropagation()}
+                onMouseDown={(event) => event.stopPropagation()}
+              />
             ) : (
               <img src={item.mediaUrl} alt={item.title} />
             )}
